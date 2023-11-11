@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <div class="header">PASSWORD GENERATOR</div>
+            <div class="pass-name">
+                <input readonly name="" id="pass-ex" placeholder="PASSWORD" data-passwordDisplay>
+                <span data-copyMsg></span>
+                <button id="copy-btn" onclick="copyContent()"  data-copy>
+
+                    <img src="assets/copy.svg" alt="copy" width="20px" height="20px">
+                </button>
+            </div>
+            <div class="gen-pass">
+                <div class="pass-len">
+                    <div>Password Length</div>  
+                    <div id="len-num" data-lengthNumber>10</div>
+                </div>
+   
+                <!-- Slider -->
+                <input  type="range" name="" id="myRange" min="1" max="20" class="Slider" step="1" data-lengthSlider>
+
+                <div class="char-specs">
+                    <div>
+                        <input type="checkbox"  name="upper" class="tick" id="upper">
+                        <label for="upper">Include Uppercase Letters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="lower" class="tick" id="lower">
+                        <label for="lower">Include Lowercase Letters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="nums" class="tick" id="nums">
+                        <label for="nums">Include Numbers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="syms" class="tick" id="syms">
+                        <label for="syms">Include Symbols</label>
+                    </div>
+                </div>
+                <div class="pass-stren">
+                    <div>Strength</div>
+                    <div class="indicator" data-indicator></div>
+                </div>
+                <button class="create-pass" >GENERATE PASSWORD</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ebfc1c613e.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<!-- before after -->

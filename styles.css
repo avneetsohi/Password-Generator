@@ -1,0 +1,352 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+:root{
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268, 47%, 21%);
+    --lt-violet2: hsl(281, 89%, 26%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+  
+    --vb-yellow: hsl(52, 100%, 62%);
+  
+  
+    --pl-white: hsl(0, 0%, 100%);
+  
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+    --dk-text: hsl(198, 20%, 13%);
+}
+ 
+
+#wrapper{
+   
+    height: 100vh;
+    width: 100vw;
+    /* the change */
+    background: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%, rgba(52, 28, 79, 1) 50%, rgba(88, 7, 125, 1) 100%);
+    /* background: rgb(103, 10, 126); */
+    display: flex;
+    justify-content: center;
+    font-family: 'League Spartan', sans-serif;
+    color:white;
+    overflow-x: hidden; 
+    
+}
+
+.container{
+    margin: 60px auto;
+    width: 27vw;
+    /* border:2px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    font-style:bold;
+    
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+    color: var(--pl-white);
+    opacity:0.75;
+    font-size: 28px;
+    /* line-height: 38.4px; */
+    line-height: 1.2;
+    /* word-spacing: 2px; */
+    letter-spacing: 2px;
+    font-weight: 600;
+
+}
+
+.pass-name{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border-radius: 12px;
+    padding:10px;
+    height: 65px;
+    box-shadow: 0 3px 0 mediumorchid;
+
+    /* the changes */
+    position: relative;
+    /* background-color: var(--dk-violet);
+    border-radius: 1rem;
+    border-bottom: 0.35 solid var(--lt-violet2);
+    margin: 1rem 0;
+    padding-top: 0.35rem; */
+     
+
+}
+
+#pass-ex{
+    background: transparent;
+    border: none;
+    
+    font-size: 1.5rem;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--vb-yellow);
+    outline: none;
+    width:75%;
+}
+
+/* the changes */
+#pass-ex::placeholder{
+    color: var(--vb-yellow);
+
+    position:absolute;
+    top:30%;
+    left:1rem;
+    /* font-size:1.5rem;
+    line-height: 30px; */
+    opacity: 0.65;
+
+}
+
+#copy-btn{
+    color:cyan;
+    background-color: transparent;
+    border: none;
+    /* font-size: 20px; */
+    cursor: pointer;
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+span{
+
+    position: absolute;
+    top:-30%;
+    right:-5%;
+    background-color: var(--vb-violet);
+    color: var(--vb-yellow);
+    /* height: 20px;
+    width:60px; */
+    text-align: center;
+    font-size: 18px;
+    padding:8px;
+    border-radius: 50px;
+    scale: 0;
+    visibility: hidden;
+    transition: all 250ms ease-in-out;
+    
+
+}
+
+.active{
+    visibility:visible;
+    scale: 1;
+    
+}
+
+
+
+.gen-pass{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    padding:18px;
+    padding-top:30px;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 5px 0 mediumorchid;
+    
+}
+
+.pass-len{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    line-height: 20px;
+    word-spacing: 0px;
+    font-style: bold;
+    color:var(--pl-white);
+}
+
+
+
+#len-num{
+    color:yellow;
+}
+
+/* V V V IMP */
+.Slider{
+    
+    appearance: none;
+    cursor: pointer;
+    background-color: var(--lt-violet);
+    border-radius: 1rem;
+    height: 0.75rem;
+    background-image: linear-gradient(var(--vb-violet), var(--vb-violet));
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    
+    
+}
+
+/* V V V IMP */
+.Slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    background-color: var(--vb-yellow);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0px rgba(255,229,61,0.50);
+    /* transition: all 100ms ease-in; */
+
+    
+}
+
+
+
+
+.Slider:focus{
+    outline: 3px solid var(--vb-yellow);
+}
+
+.Slider::-webkit-slider-thumb:hover{
+    background-color: var(--dk-violet);
+    outline: 2px solid var(--vb-yellow);
+    box-shadow: 0 0 20px 0px rgba(255,229,61,0.80);
+}
+
+
+/* For mozilla firefox
+.Slider::-moz-range-thumb{
+    position: relative;
+    appearance: none;
+    background-color: var(--vb-yellow);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0px rgba(255,229,61,0.5);
+    /* transition: all 100ms ease-in;
+
+} 
+
+.Slider::-moz-range-thumb:hover{
+    background-color: var(--dk-violet);
+    outline: 2px solid var(--vb-yellow);
+    box-shadow: 0 0 20px 0px rgba(255,229,61,0.8);
+} */
+
+.char-specs{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 16.7px;
+    letter-spacing: 0.8px;
+    justify-content: space-evenly;
+    gap:10px;
+    font-weight: 400;
+}
+
+.char-specs div{
+    display: flex;
+    
+    align-items: center;
+    gap:10px;
+}
+
+
+/* Most Important to Understand */
+.tick{
+    cursor: pointer;
+    background-color: transparent;
+    /* default style set by browser is not used if appearance is set to none */
+    appearance: none;    
+    border: 1px solid var(--vb-cyan ); 
+    width: 20px;
+    height: 20px; 
+    border-radius: 0.35rem;
+
+    position: relative;
+    /* positiion is set relative because we have to overlap our own styled tick */
+
+}
+
+/* V. V. V. Important */
+.tick:checked{
+    background-color: var(--vb-cyan);
+}
+
+/* V. V. V. Important */
+.tick:checked::before{
+    content:'✔';
+    position:absolute;
+    color:var(--dk-text);
+    font-size: 1.05rem;
+    font-weight: 600;
+    left:15%;
+    top:-3.5px;
+}
+
+
+.pass-stren{
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    gap:10px;
+    font-size: 24px;
+    line-height: 20px;
+    
+    
+}
+ 
+
+.indicator{
+    
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 10px 2px white;
+    /* box-shadow: 2 2 5px gray; */
+    width: 23px;
+    height: 23px;
+    
+}
+
+.create-pass{
+    color:yellow;
+    background-color: var(--vb-violet);
+    box-shadow: 0 3px 0 var(--vb-yellow);
+    height: 40px;
+    font-size: 20px;
+    line-height: 18.7px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: 600;
+    padding-top: 6px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
